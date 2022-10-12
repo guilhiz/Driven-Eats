@@ -20,6 +20,7 @@ body {
 .container {
   width: 414px;
   margin: 0px auto;
+  background-color: #EEEEEE;
 }
 
 header {
@@ -28,10 +29,25 @@ header {
   height: 92px;
 }
 
+h1 {
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 55px;
+  color: #FFFFFF;
+  margin-left: 21px;
+}
+
+header p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  margin-left: 21px;
+}
+
 main {
   width: 100%;
   padding: 0px 15px;
-  overflow-x: hidden;
 }
 
 .title-secondary h2 {
@@ -39,12 +55,13 @@ main {
   font-size: 26px;
   line-height: 32px;
   color: var(--primary-text);
-  margin: 31px 0px 17px;
+  margin: 27px 0px 17px;
 }
 
 .container-card {
   display: flex;
-  justify-self: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .card {
@@ -53,6 +70,17 @@ main {
   margin-right: 16px;
   border-radius: 9px;
   box-shadow: 0px 0px 10px -4px var(--shadow);
+  flex-shrink: 0;
+}
+
+.card img {
+  width: 144px;
+  margin: 18px 14px 0px;
+}
+
+.card-texts {
+  width: 144px;
+  margin: 0px 14px 13px;
 }
 
 .card h3 {
@@ -76,6 +104,27 @@ main {
   line-height: 19px;
   color: black;
   margin: 9px 0px 16px;
+}
+
+footer {
+  width: 100%;
+  height: 92px;
+}
+
+button {
+  width: 364px;
+  height: 61px;
+  border-radius: 50px;
+  background-color: var(--unselected-color);
+  margin: 23px 25px 16px;
+}
+
+button p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #ffffff;
 }
 
 /*
