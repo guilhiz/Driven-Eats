@@ -67,7 +67,7 @@ main {
 
 .card {
   width: 172px;
-  height: 216px;
+  height: 220px;
   margin-right: 16px;
   border-radius: 9px;
   box-shadow: 0px 0px 10px -4px var(--shadow);
@@ -101,11 +101,14 @@ main {
 }
 
 .card .card-price {
+  display: flex;
+  align-items: center;
+  height: 20px;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: black;
-  margin: 9px 0px 16px;
+  margin: 14px 0px 16px;
 }
 
 .card-price span {
@@ -126,6 +129,10 @@ button {
   background-color: var(--unselected-color);
   margin: 23px 0px 16px;
   cursor: pointer;
+}
+
+.button-active {
+  background-color: var(--selected-color);
 }
 
 button p {
