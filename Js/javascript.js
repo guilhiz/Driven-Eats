@@ -4,7 +4,7 @@ let drink;
 let drinkPrice = 0;
 let dessert;
 let dessertPrice = 0;
-let soma = 0
+let soma = 0;
 let totalPrice = 0;
 
 function foodClick(selected) {
@@ -14,14 +14,10 @@ function foodClick(selected) {
     foodsList[i].classList.remove("active");
     selected.classList.add("active");
     // Saves the price and value of the selected card
-    food = selected.querySelector(".card-texts h3").textContent;
-    foodPrice = selected
-      .querySelector(".card-texts .card-price")
-      .textContent.slice(3)
-      .replace(",", ".");
-    buttoncheck();
+    food = selected.querySelector("h3").textContent;
+    foodPrice = selected.querySelector(".card-price").textContent.slice(3).replace(",", ".");
+    buttonCheck();
     priceSum();
-    console.log(totalPrice);
   }
 }
 
@@ -32,14 +28,10 @@ function drinkClick(selected) {
     drinksList[i].classList.remove("active");
     selected.classList.add("active");
     // Saves the price and value of the selected card
-    drink = selected.querySelector(".card-texts h3").textContent;
-    drinkPrice = selected
-      .querySelector(".card-texts .card-price")
-      .textContent.slice(3)
-      .replace(",", ".");
-    buttoncheck();
+    drink = selected.querySelector("h3").textContent;
+    drinkPrice = selected.querySelector(".card-price").textContent.slice(3).replace(",", ".");
+    buttonCheck();
     priceSum();
-    console.log(totalPrice);
   }
 }
 
@@ -50,18 +42,14 @@ function dessertClick(selected) {
     dessertsList[i].classList.remove("active");
     selected.classList.add("active");
     // Saves the price and value of the selected card
-    dessert = selected.querySelector(".card-texts h3").textContent;
-    dessertPrice = selected
-      .querySelector(".card-texts .card-price")
-      .textContent.slice(3)
-      .replace(",", ".");
-    buttoncheck();
+    dessert = selected.querySelector("h3").textContent;
+    dessertPrice = selected.querySelector(".card-price").textContent.slice(3).replace(",", ".");
+    buttonCheck();
     priceSum();
-    console.log(totalPrice);
   }
 }
 
-function buttoncheck() {
+function buttonCheck() {
   const button = document.getElementById("button");
   if (food !== undefined && drink !== undefined && dessert !== undefined) {
     button.disabled = false;
@@ -75,19 +63,20 @@ function buttoncheck() {
 function whatsappLink() {
   const clientName = prompt("What is your name? ");
   const clientAddress = prompt("What will the shipping address be?");
-  const mensage = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+  const message = encodeURIComponent(`Olá, gostaria de fazer o pedido:
   - Prato: *${food}*
   - Bebida: *${drink}*
   - Sobremesa: *${dessert}*
   Total: *R$ ${totalPrice}*\n
   Nome: *${clientName}*
   Endereço: *${clientAddress}*`);
-  window.open(`https://wa.me/5581999705626?text=${mensage}`, "_blank");
+  window.open(`https://wa.me/5581999705626?text=${message}`, "_blank");
 }
 
 function priceSum() {
   soma = Number(foodPrice) + Number(drinkPrice) + Number(dessertPrice);
-  totalPrice = soma.toFixed(2).replace(".", ",")
+  totalPrice = soma.toFixed(2).replace(".", ",");
 }
 
-buttoncheck();
+buttonCheck();
+

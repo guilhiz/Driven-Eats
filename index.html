@@ -17,29 +17,37 @@
             <div class="title-secondary">
                 <h2>Primeiro, seu prato</h2>
             </div>
-            <div class="container-card">
-                <div class="card food" onclick="foodClick(this)">
+            <div class="container-card" data-test="dishes">
+                <div class="card food" onclick="foodClick(this)" data-test="food-option">
                     <img src="./images/frango_yin_yang 1.svg" alt="a picture of the plate with the food">
                     <div class="card-texts">
-                        <h3>Frango Yin Yang</h3>
+                        <h3 data-test="food-title">Frango Yin Yang</h3>
                         <p>Um pouco de batata, um pouco de salada</p>
-                        <p class="card-price">R$ 14,90 <span  ><ion-icon name="checkmark-circle"></ion-icon></span></p>
+                        <p class="card-price" data-test="food-price">R$ 14,90 <span  ><ion-icon name="checkmark-circle"></ion-icon></span></p>
+                    </div>
+                </div> 
+                <div class="card food" onclick="foodClick(this)" data-test="food-option">
+                    <img src="./images/Pizza-3-queijos.webp" alt="a picture of the plate with the food">
+                    <div class="card-texts">
+                        <h3 data-test="food-title">Pizza 3 queijos</h3>
+                        <p>Um pouco de pizza, um pouco de queijo</p>
+                        <p class="card-price" data-test="food-price">R$ 22,99 <span  ><ion-icon name="checkmark-circle"></ion-icon></span></p>
                     </div>
                 </div>  
-                <div class="card food" onclick="foodClick(this)">
-                    <img src="./images/frango_yin_yang 1.svg" alt="a picture of the plate with the food">
+                <div class="card food" onclick="foodClick(this)" data-test="food-option">
+                    <img src="./images/dogão-60cm.jpeg" alt="a picture of the plate with the food">
                     <div class="card-texts">
-                        <h3>Frango Yin Yang</h3>
-                        <p>Um pouco de batata, um pouco de salada</p>
-                        <p class="card-price">R$ 14,90<span><ion-icon name="checkmark-circle"></ion-icon></p>
+                        <h3 data-test="food-title">Dogão de 60cm</h3>
+                        <p>Um pouco de batata, um pouco de salsicha</p>
+                        <p class="card-price" data-test="food-price">R$ 20,70<span><ion-icon name="checkmark-circle"></ion-icon></p>
                     </div>
                 </div>
-                <div class="card food" onclick="foodClick(this)">
-                    <img src="./images/frango_yin_yang 1.svg" alt="a picture of the plate with the food">
+                <div class="card food" onclick="foodClick(this)" data-test="food-option">
+                    <img src="./images/Subway.png" alt="a picture of the plate with the food">
                     <div class="card-texts">
-                        <h3>Frango Yin Yang</h3>
-                        <p>Um pouco de batata, um pouco de salada</p>
-                        <p class="card-price">R$ 14,90<spa><ion-icon name="checkmark-circle"></ion-icon></p>
+                        <h3 data-test="food-title">Subway</h3>
+                        <p>suculentas tiras de carnes</p>
+                        <p class="card-price" data-test="food-price">R$ 30,20<spa><ion-icon name="checkmark-circle"></ion-icon></p>
                     </div>
                 </div>
             </div>
@@ -47,65 +55,81 @@
             <div class="title-secondary">
                 <h2>Agora, sua bebida</h2>
             </div>
-            <div class="container-card">
-                <div class="card drink" onclick="drinkClick(this)">
+            <div class="container-card" data-test="drinks">
+                <div class="card drink" onclick="drinkClick(this)" data-test="food-option">
                     <img src="./images/coquinha_gelada 1.svg" alt="a photo of the drinks">
                     <div class="card-texts">
-                        <h3>Coquinha gelada</h3>
+                        <h3 data-test="food-title">Coquinha gelada</h3>
                         <p>Lata 350ml</p>
-                        <p class="card-price">R$ 4,90<span><ion-icon name="checkmark-circle"></ion-icon></span></p>
+                        <p class="card-price" data-test="food-price">R$ 4,90<span><ion-icon name="checkmark-circle"></ion-icon></span></p>
                     </div>
                 </div>  
-                <div class="card drink" onclick="drinkClick(this)">
-                    <img src="./images/coquinha_gelada 1.svg" alt="a photo of the drinks">
+                <div class="card drink" onclick="drinkClick(this)" data-test="food-option">
+                    <img src="./images/budwieser.jpeg" alt="a photo of the drinks">
                     <div class="card-texts">
-                        <h3>Coquinha gelada</h3>
-                        <p>Lata 350ml</p>
-                        <p class="card-price">R$ 4,90<span><ion-icon name="checkmark-circle"></ion-icon></span></p>
+                        <h3 data-test="food-title">Budweiser</h3>
+                        <p>350ml (12 unidades)</p>
+                        <p class="card-price" data-test="food-price">R$ 16,40<span><ion-icon name="checkmark-circle"></ion-icon></span></p>
                     </div>
                 </div>
-                <div class="card drink" onclick="drinkClick(this)">
-                    <img src="./images/coquinha_gelada 1.svg" alt="a photo of the drinks">
+                <div class="card drink" onclick="drinkClick(this)" data-test="food-option">
+                    <img src="./images/skol-beats-150BPM.jpeg" alt="a photo of the drinks">
                     <div class="card-texts">
-                        <h3>Coquinha gelada</h3>
-                        <p>Lata 350ml</p>
-                        <p class="card-price">R$ 4,90<span><ion-icon name="checkmark-circle"></ion-icon></span></p>
+                        <h3 data-test="food-title">Skol beats 150BPM</h3>
+                        <p>Lata 300ml</p>
+                        <p class="card-price" data-test="food-price">R$ 8,40<span><ion-icon name="checkmark-circle"></ion-icon></span></p>
                     </div>
                 </div>
+                <div class="card drink" onclick="drinkClick(this)" data-test="food-option">
+                    <img src="./images/heineken.webp" alt="a photo of the drinks">
+                    <div class="card-texts">
+                        <h3 data-test="food-title">Heineken</h3>
+                        <p>Heineken 330ml</p>
+                        <p class="card-price" data-test="food-price">R$ 9,70<span><ion-icon name="checkmark-circle"></ion-icon></span></p>
+                    </div>
+                </div>  
             </div>
 
             <div class="title-secondary">
                 <h2>Por fim, sua sobremesa</h2>
             </div>
-            <div class="container-card">
-                <div class="card dessert" onclick="dessertClick(this)">
+            <div class="container-card" data-test="desserts">
+                <div class="card dessert" onclick="dessertClick(this)" data-test="food-option">
                     <img src="./images/pudim 1.svg" alt="a picture of dessert">
                     <div class="card-texts">
-                        <h3>Pudim</h3>
+                        <h3 data-test="food-title">Pudim</h3>
                         <p>Apenas pudim</p>
-                        <p class="card-price">R$ 7,90<span><ion-icon name="checkmark-circle"></ion-icon></span></p>
+                        <p class="card-price" data-test="food-price">R$ 7,90<span><ion-icon name="checkmark-circle"></ion-icon></span></p>
                     </div>
                 </div>  
-                <div class="card dessert" onclick="dessertClick(this)">
-                    <img src="./images/pudim 1.svg" alt="a picture of dessert">
+                <div class="card dessert" onclick="dessertClick(this)" data-test="food-option">
+                    <img src="./images/esfirra.jpg" alt="a picture of dessert">
                     <div class="card-texts">
-                        <h3>Pudim</h3>
-                        <p>Apenas pudim</p>
-                        <p class="card-price">R$ 7,90<span><ion-icon name="checkmark-circle"></ion-icon></span></p>
+                        <h3 data-test="food-title">Esfirra</h3>
+                        <p>12 esfirra</p>
+                        <p class="card-price" data-test="food-price">R$ 27,99<span><ion-icon name="checkmark-circle"></ion-icon></span></p>
                     </div>
                 </div>
-                <div class="card dessert" onclick="dessertClick(this)">
-                    <img src="./images/pudim 1.svg" alt="a picture of dessert">
+                <div class="card dessert" onclick="dessertClick(this)" data-test="food-option">
+                    <img src="./images/açai-protein.png" alt="a picture of dessert">
                     <div class="card-texts">
-                        <h3>Pudim</h3>
-                        <p>Apenas pudim</p>
-                        <p class="card-price">R$ 7,90<span><ion-icon name="checkmark-circle"></ion-icon></span></p>
+                        <h3 data-test="food-title">Açaí protein</h3>
+                        <p>Açaí fitness</p>
+                        <p class="card-price" data-test="food-price">R$ 12,20<span><ion-icon name="checkmark-circle"></ion-icon></span></p>
                     </div>
                 </div>
+                <div class="card dessert" onclick="dessertClick(this)" data-test="food-option">
+                    <img src="./images/churros.jpeg" alt="a picture of dessert">
+                    <div class="card-texts">
+                        <h3 data-test="food-title">churros</h3>
+                        <p>Apenas churros</p>
+                        <p class="card-price" data-test="food-price">R$ 13,10<span><ion-icon name="checkmark-circle"></ion-icon></span></p>
+                    </div>
+                </div>  
             </div>
         </main>  
         <footer>
-            <button class="button" id="button" onclick="whatsappLink()">
+            <button class="button" id="button" onclick="whatsappLink()" data-test="finish-button">
                 <p>Selecione os 3 itens<br>
                 para fechar o pedido</p>
             </button>
