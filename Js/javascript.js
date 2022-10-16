@@ -1,49 +1,60 @@
-const cards = document.querySelectorAll(".card");
-const icons = document.querySelectorAll(".hide");
-const foodsList = document.querySelectorAll(".food");
-const drinksList = document.querySelectorAll(".drink");
-const dessertsList = document.querySelectorAll(".desert");
-let contador = 0;
-
-console.log(foodsList);
-
 let food;
-let foodPrice = 0;
+let foodPrice = 8;
 let drink;
 let drinkPrice = 0;
 let dessert;
 let dessertPrice = 0;
 let totalPrice = foodPrice + drinkPrice + dessertPrice;
 
-for (let i = 0; i <= drinksList.length; i++) {
-  drinksList[i].addEventListener("click", function () {
-      drinksList[i].classList.toggle("active");
-      icons[i].classList.toggle("hide");
-     drinkPrice = drinksList[i].querySelector(".card-texts .card-price").textContent;
-      drink = drinksList[i].querySelector(".card-texts h3").textContent;
-      console.log(drink, drinkPrice);
-  });
+function foodClick(selected) {
+  let foodsList = document.querySelectorAll(".food");
+  for (let i = 0; i <= foodsList.length; i++) {
+    //Activates only the I choose after deactivating all others.
+    foodsList[i].classList.remove("active");
+    selected.classList.add("active");
+    // Saves the price and value of the selected card
+    food = selected.querySelector(".card-texts h3").textContent;
+    foodPrice = selected.querySelector(".card-texts .card-price").textContent;
+    console.log(foodPrice, food);
+    buttoncheck();
+  }
 }
 
-for (let i = 0; i <= foodsList.length; i++) {
-  foodsList[i].addEventListener("click", function () {
-      foodsList[i].classList.toggle("active");
-      icons[i].classList.toggle("hide");
-      foodPrice = foodsList[i].querySelector(".card-texts .card-price").textContent;
-      food = foodsList[i].querySelector(".card-texts h3").textContent;
-      console.log(food, foodPrice);
-  });
+function drinkClick(selected) {
+  let drinksList = document.querySelectorAll(".drink");
+  for (let i = 0; i <= drinksList.length; i++) {
+    //Activates only the I choose after deactivating all others.
+    drinksList[i].classList.remove("active");
+    selected.classList.add("active");
+    // Saves the price and value of the selected card
+    drink = selected.querySelector(".card-texts h3").textContent;
+    drinkPrice = selected.querySelector(".card-texts .card-price").textContent;
+    console.log(drinkPrice, drink);
+    buttoncheck();
+  }
 }
 
+function dessertClick(selected) {
+  let dessertsList = document.querySelectorAll(".dessert");
+  for (let i = 0; i <= dessertsList.length; i++) {
+    //Activates only the I choose after deactivating all others.
+    dessertsList[i].classList.remove("active");
+    selected.classList.add("active");
+    // Saves the price and value of the selected card
+    dessert = selected.querySelector(".card-texts h3").textContent;
+    dessertPrice = selected.querySelector(".card-texts .card-price").textContent;
+    console.log(dessertPrice, dessert);
+    buttoncheck();
+  }
+}
 
-
-/*Fim click event */
 function buttoncheck() {
-  const button = document.getElementById(button);
+  const button = document.getElementById("button");
   if (food !== undefined && drink !== undefined && dessert !== undefined) {
+    button.disabled = false;
     button.innerHTML = "Fechar pedido";
-    button.classList.add(".button-active");
-  } else if (food === undefined && drink === undefined && dessert === undefined) {
+    button.classList.add("check");
+  } else {
     button.disabled = true;
   }
 }
@@ -56,14 +67,4 @@ function whatsappLink() {
   Total: R$ ${totalPrice}`);
   window.open(`https://wa.me/5581999705626?text=${mensage}`, "_blank");
 }
-
-function removeActive() {
-  for (let i = 0; i >= 5; i++) {
-    if (foodsList[i].classList.contains("active")) {
-      foodsList[i].classList.toggle("active");
-      icons[i].classList.toggle("hide");
-    }
-  }
-}
-
 buttoncheck();
