@@ -8,45 +8,39 @@ let soma = 0;
 let totalPrice = 0;
 
 function foodClick(selected) {
-  let foodsList = document.querySelectorAll(".food");
-  for (let i = 0; i <= foodsList.length; i++) {
-    //Activates only the I choose after deactivating all others.
-    foodsList[i].classList.remove("active");
-    selected.classList.add("active");
-    // Saves the price and value of the selected card
-    food = selected.querySelector("h3").textContent;
-    foodPrice = selected.querySelector(".card-price").textContent.slice(3).replace(",", ".");
-    buttonCheck();
-    priceSum();
+  const foodActive = document.querySelector(".foods .active");
+  if (foodActive !== null) {
+    foodActive.classList.remove("active");
   }
+  selected.classList.add("active");
+  food = selected.querySelector("h3").textContent;
+  foodPrice = selected.querySelector(".card-price").textContent.slice(3).replace(",", ".");
+  buttonCheck();
+  priceSum();
 }
 
 function drinkClick(selected) {
-  let drinksList = document.querySelectorAll(".drink");
-  for (let i = 0; i <= drinksList.length; i++) {
-    //Activates only the I choose after deactivating all others.
-    drinksList[i].classList.remove("active");
-    selected.classList.add("active");
-    // Saves the price and value of the selected card
-    drink = selected.querySelector("h3").textContent;
-    drinkPrice = selected.querySelector(".card-price").textContent.slice(3).replace(",", ".");
-    buttonCheck();
-    priceSum();
+  const drinkActive = document.querySelector(".drinks .active");
+  if (drinkActive !== null) {
+    drinkActive.classList.remove("active");
   }
+  selected.classList.add("active");
+  drink = selected.querySelector("h3").textContent;
+  drinkPrice = selected.querySelector(".card-price").textContent.slice(3).replace(",", ".");
+  buttonCheck();
+  priceSum();
 }
 
 function dessertClick(selected) {
-  let dessertsList = document.querySelectorAll(".dessert");
-  for (let i = 0; i <= dessertsList.length; i++) {
-    //Activates only the I choose after deactivating all others.
-    dessertsList[i].classList.remove("active");
-    selected.classList.add("active");
-    // Saves the price and value of the selected card
-    dessert = selected.querySelector("h3").textContent;
-    dessertPrice = selected.querySelector(".card-price").textContent.slice(3).replace(",", ".");
-    buttonCheck();
-    priceSum();
+  const dessertActive = document.querySelector(".desserts .active");
+  if (dessertActive !== null) {
+    dessertActive.classList.remove("active");
   }
+  selected.classList.add("active");
+  dessert = selected.querySelector("h3").textContent;
+  dessertPrice = selected.querySelector(".card-price").textContent.slice(3).replace(",", ".");
+  buttonCheck();
+  priceSum();
 }
 
 function buttonCheck() {
@@ -70,7 +64,7 @@ function whatsappLink() {
   Total: *R$ ${totalPrice}*\n
   Nome: *${clientName}*
   Endereço: *${clientAddress}*`);
-  window.open(`https://wa.me/5581999705626?text=${message}`, "_blank");
+  window.open(`https://wa.me/5581999705626?text=${message}`);
 }
 
 function priceSum() {
@@ -79,4 +73,3 @@ function priceSum() {
 }
 
 buttonCheck();
-
